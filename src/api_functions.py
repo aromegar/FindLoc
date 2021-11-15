@@ -34,7 +34,7 @@ def google(busco,radio,location):
     headers={}
     try:
         resp = requests.get(url, headers=headers, data=payload)
-        return resp.json()
+        return resp.json()["results"]
     except:
         return "error"
 
